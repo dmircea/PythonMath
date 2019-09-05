@@ -1,3 +1,9 @@
+# 	This program was created by Mircea Dumitrache. ILA and student at California State University, Fullerton.
+#	This program is a simplistic calculator that performs operations on a user defined list.
+#	The operations range from a simple average to finding the quartiles.
+#	Please see the README file for more information on its current or planned functionalities.
+
+
 def main():
 	print("Entering main function")
 	arrayX = []
@@ -104,9 +110,11 @@ def getMin(arr):
 
 #	This function will be used to find the median of the array
 def getMedian(arr):
-	if(len(arr) % 2 == 0):
+	if(len(arr) % 2 == 0):	#	The size of array is even
+		#	take half of the length and use it as the index of the array. take half of the lenght minus one and use it
+		#	as the index for the other number. return the average of the two numbers
 		return (arr[int((len(arr) / 2))] + arr[int((len(arr) / 2 - 1))]) / 2
-	else:
+	else:					#	The size of array is odd.
 		return arr[int(len(arr) / 2)]
 
 #	This function will be used to find the 1st quartile
@@ -119,7 +127,7 @@ def getFirstQrt(arr):
 		if(int(len(arr) / 2) % 2 == 0):
 			return (arr[int(len(arr) / 4)] + arr[int(len(arr) / 4 -1)]) / 2
 		else:
-			return arr[int
+			pass
 
 
 #	This function will be used to find the 3rd quartile
