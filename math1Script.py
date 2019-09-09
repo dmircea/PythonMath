@@ -3,6 +3,7 @@
 #	The operations range from a simple average to finding the quartiles.
 #	Please see the README file for more information on its current or planned functionalities.
 
+import helperFunct as helper
 
 def main():
 	print("Entering main function")
@@ -16,8 +17,8 @@ def main():
 		print("3. Take the average of the array.")
 		print("4. Find the mode of the array.")
 		print("5. Find the range of the array.")
-		print("6. Find the median of the array. TODO")
-		print("7. Find the 1st and 3rd quartile. TODO")
+		print("6. Find the median of the array.")
+		print("7. Find the 1st and 3rd quartile.")
 		print("10. Exit the program.")
 
 		choice = int(input("Your choice:"))
@@ -55,9 +56,10 @@ def main():
 
 		elif(choice == 7):
 			#	Choice to find the first and third quartile and print them to the screen
-			break
+			print("The first quartile is: " + str(getFirstQrt(arrayX)))
+			print("THe third quartile is: " + str(getThridQrt(arrayX)))
 
-	print("Thank you for using this program! Goodbay!")
+	print("Thank you for using this program! Goodbye!")
 
 #	This is the function used for choice number 2
 def getNum():
@@ -110,29 +112,30 @@ def getMin(arr):
 
 #	This function will be used to find the median of the array
 def getMedian(arr):
+	helper.simpleSort(arr)
 	if(len(arr) % 2 == 0):	#	The size of array is even
-		#	take half of the length and use it as the index of the array. take half of the lenght minus one and use it
-		#	as the index for the other number. return the average of the two numbers
+							#	take half of the length and use it as the index of the array. take half of the lenght minus one and use it
+							#	as the index for the other number. return the average of the two numbers
 		return (arr[int((len(arr) / 2))] + arr[int((len(arr) / 2 - 1))]) / 2
 	else:					#	The size of array is odd.
 		return arr[int(len(arr) / 2)]
 
 #	This function will be used to find the 1st quartile
 def getFirstQrt(arr):
-	#	TODO
-	if(len(arr) % 2 == 0):
-		return
-
-	else:
-		if(int(len(arr) / 2) % 2 == 0):
-			return (arr[int(len(arr) / 4)] + arr[int(len(arr) / 4 -1)]) / 2
-		else:
-			pass
-
+	helper.simpleSort(arr)
+	newArray = arr[:int(len(arr) / 2)]
+	print("First quartile array: " + str(newArray))
+	return getMedian(newArray)
 
 #	This function will be used to find the 3rd quartile
 def getThridQrt(arr):
-	return
+	helper.simpleSort(arr)
+	if(len(arr) % 2 == 0):
+		newArray = arr[int(len(arr) / 2):]
+	else:
+		newArray = arr[int(len(arr) / 2) +1:]
+	print("Third quartile array: " + str(newArray))
+	return getMedian(newArray)
 
 
 main()

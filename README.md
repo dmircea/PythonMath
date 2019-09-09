@@ -8,8 +8,8 @@ Current capabilities include:
       - Finding the mode
       - Finding the median
       - Finding the range
-      - Finding the 1st and 3rd quartile. (Unfinished)
-      - Sorting the list (Not Added)(will cover several functionalities)
+      - Finding the 1st and 3rd quartile. (Finished as of September 7th 2019)
+      - Sorting the list (Partially Added)(will cover several functionalities)
       - Adding numbers to the list.
 
 
@@ -25,4 +25,3 @@ Planned updates:
 Future updates (less immediate):
       - Adding functionality for controlling multiple lists.
       - Adding functionality between lists. (Greatest average value, combine average value, compare ranges, etc...)
-      
