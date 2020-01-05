@@ -1,4 +1,5 @@
 #   This file contains the helper functions for the original script.
+#   Please see the top of 'math1Script.py' for more information.
 
 def simpleSort(arr):
     if(len(arr) < 1):
@@ -23,11 +24,14 @@ def simpleSortDec(arr): #   TODO
                 arr[i] = temp
 
 def checkSorted(arr):
-    print("Checking if sorted...")
+    print('Checking if sorted...')
     for i in range(1,len(arr)):
         if(arr[i-1] > arr[i]):
-            print("Not sorted. Sorting...")
+            print('Not sorted. Sorting...')
             return False;
 
-    print("Already sorted!")
+    print('Already sorted!')
     return True;
+
+def mergeSort(arr):
+    pass
