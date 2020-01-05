@@ -11,17 +11,21 @@ This is a simple script that allows the user to edit a simple list, and run math
   - Finding the 1st and 3rd quartile. (Finished as of September 7th 2019)
   - Sorting the list (Partially Added)(will cover several functionalities)
   - Adding numbers to the list.
+  - Deleting numbers from the list. (Finished as of January 4th 2020)
+  - Adding several numbers at once to the list. (Finished as of January 4th 2020)
 
 
 - Planned updates:
-  - Deleting numbers from the list.
-  - Adding several numbers at once to the list.
-  - Finishing the 1st and 3rd quartile section.
-  - Adding insert sort functionality.
   - Adding merge sort functionality.
-  - Adding simple sort functionality.
-  - Adding timers to functions.(And statistical data.)
+  - Adding shuffle functionality.
+  - Adding timers to sorting functions.
 
 - Future updates (less immediate):
-  - Adding functionality for controlling multiple lists.
-  - Adding functionality between lists. (Greatest average value, combine average value, compare ranges, etc...)
+  - Adding a command line type of interaction rather then the current menu-driven interaction
+  - Adding functionality for controlling multiple lists (as data sets).
+    - Combining data sets and their statistics.
+    - Splitting a data set into separate lists.
+    - Compare statistics between data sets.
+  - Adding functionality between data sets. (Greatest average value, combine average value, compare ranges, etc...)
+  - Store data sets on disk.
+  - Retrieve data set from disk.
